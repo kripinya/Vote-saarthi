@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cast your vote securely with end-to-end encryption. Only the Election Commission can decrypt your choice.">
+  <title>Cast Your Vote — Vote Saarthi</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="bg-animation"></div>
+  <nav id="navbar"></nav>
+
+  <main class="vote-container" id="voteMain">
+    <h1 data-translate="vote_title">🗳️ Cast Your Vote</h1>
+    <p class="vote-subtitle" id="voteConstLabel" data-translate="vote_subtitle">Select your candidate below</p>
+
+    <div class="encryption-badge">
+      <span class="lock-icon">🔒</span>
+      <span data-translate="vote_encrypted">End-to-End Encrypted — Only Election Commission can decrypt</span>
+    </div>
+
+    <div class="candidate-list" id="candidateList">
+      <p style="color:var(--text-muted);text-align:center;">Loading candidates...</p>
+    </div>
+
+    <div class="vote-actions" id="voteActions" style="display:none;">
+      <button class="btn btn-saffron btn-lg" onclick="confirmVote()" id="castVoteBtn" data-translate="vote_cast_btn">
+        🗳️ Cast My Vote
+      </button>
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.8rem;" data-translate="vote_warning">⚠️ This action cannot be undone. Your vote is final.</p>
+    </div>
+
+    <!-- Already voted state -->
+    <div id="alreadyVoted" style="display:none;"></div>
+  </main>
+
+  <!-- Confirm Modal -->
+  <div class="modal-overlay" id="confirmModal">
+    <div class="modal">
+      <h2 data-translate="vote_confirm_title">Confirm Your Vote</h2>
+      <div class="confirm-candidate" id="confirmDetails"></div>
+      <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;text-align:center;" data-translate="vote_confirm_msg">Are you sure? This cannot be changed after submission.</p>
+      <div class="modal-actions">
+        <button class="btn btn-outline" onclick="closeModal()" data-translate="vote_cancel">Cancel</button>
+        <button class="btn btn-green" onclick="submitVote()" id="submitBtn" data-translate="vote_submit">✓ Confirm & Encrypt</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Receipt Modal -->
+  <div class="modal-overlay" id="receiptModal">
+    <div class="modal">
+      <div class="receipt-card glass-card">
+        <div class="check">✅</div>
+        <h2 data-translate="receipt_title">Vote Recorded Successfully!</h2>
+        <p style="color:var(--text-secondary);margin-bottom:0.5rem;" data-translate="receipt_msg">Your vote has been encrypted and securely stored.</p>
+        <div class="receipt-hash" id="receiptHash">---</div>
+        <p style="font-size:0.75rem;color:var(--text-muted);" data-translate="receipt_save">Save this receipt hash for your records</p>
+      </div>
+      <button class="btn btn-saffron" onclick="window.location.href='/dashboard'" style="width:100%;justify-content:center;margin-top:1rem;" data-translate="receipt_dashboard">Return to Dashboard</button>
+    </div>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/translate.js"></script>
+  <script src="/js/vote.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+{
+  "ABC1234567": {
+    "name": "Rahul Sharma",
+    "age": 28,
+    "gender": "Male",
+    "constituency": "delhi-central",
+    "state": "Delhi",
+    "district": "Central Delhi",
+    "address": "45, Connaught Place, New Delhi"
+  },
+  "DEF2345678": {
+    "name": "Priya Patel",
+    "age": 35,
+    "gender": "Female",
+    "constituency": "ahmedabad-east",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "address": "12, CG Road, Ahmedabad"
+  },
+  "GHI3456789": {
+    "name": "Ananya Iyer",
+    "age": 42,
+    "gender": "Female",
+    "constituency": "chennai-south",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "address": "78, Anna Salai, Chennai"
+  },
+  "JKL4567890": {
+    "name": "Arjun Reddy",
+    "age": 31,
+    "gender": "Male",
+    "constituency": "hyderabad-central",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "address": "34, Banjara Hills, Hyderabad"
+  },
+  "MNO5678901": {
+    "name": "Saurabh Banerjee",
+    "age": 55,
+    "gender": "Male",
+    "constituency": "kolkata-north",
+    "state": "West Bengal",
+    "district": "Kolkata",
+    "address": "56, Park Street, Kolkata"
+  },
+  "PQR6789012": {
+    "name": "Meera Kulkarni",
+    "age": 29,
+    "gender": "Female",
+    "constituency": "pune-city",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "address": "89, FC Road, Pune"
+  },
+  "STU7890123": {
+    "name": "Deepak Singh",
+    "age": 45,
+    "gender": "Male",
+    "constituency": "lucknow-central",
+    "state": "Uttar Pradesh",
+    "district": "Lucknow",
+    "address": "23, Hazratganj, Lucknow"
+  },
+  "VWX8901234": {
+    "name": "Kavitha Nair",
+    "age": 38,
+    "gender": "Female",
+    "constituency": "trivandrum-central",
+    "state": "Kerala",
+    "district": "Thiruvananthapuram",
+    "address": "67, MG Road, Trivandrum"
+  },
+  "YZA9012345": {
+    "name": "Gurpreet Kaur",
+    "age": 33,
+    "gender": "Female",
+    "constituency": "amritsar-north",
+    "state": "Punjab",
+    "district": "Amritsar",
+    "address": "15, Mall Road, Amritsar"
+  },
+  "BCD0123456": {
+    "name": "Ramesh Gowda",
+    "age": 50,
+    "gender": "Male",
+    "constituency": "bangalore-south",
+    "state": "Karnataka",
+    "district": "Bengaluru",
+    "address": "101, MG Road, Bengaluru"
+  },
+  "EFG1234560": {
+    "name": "Sneha Deshmukh",
+    "age": 27,
+    "gender": "Female",
+    "constituency": "mumbai-south",
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "address": "44, Marine Drive, Mumbai"
+  },
+  "HIJ2345601": {
+    "name": "Vikram Choudhary",
+    "age": 41,
+    "gender": "Male",
+    "constituency": "jaipur-city",
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "address": "32, MI Road, Jaipur"
+  }
+}

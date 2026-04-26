@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive step-by-step guide to the Indian election process. Learn about voter registration, polling day procedures, EVM usage, and your rights.">
+  <title>Election Guide — Vote Saarthi</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="bg-animation"></div>
+  <nav id="navbar"></nav>
+
+  <main class="guide-container">
+    <h1 data-translate="guide_title">📋 Election Process Guide</h1>
+    <p class="guide-subtitle" data-translate="guide_subtitle">Everything you need to know about voting in India — step by step</p>
+    <div class="tricolor-line" style="margin-bottom:2rem;"></div>
+
+    <div class="timeline" id="guideTimeline">
+      <div class="timeline-step active" data-step="1">
+        <h3><span class="step-icon">📝</span> <span data-translate="step1_title">Voter Registration</span></h3>
+        <div class="step-content">
+          <ul>
+            <li data-translate="step1_1">You must be an Indian citizen aged 18 or above on the qualifying date</li>
+            <li data-translate="step1_2">Register online at voters.eci.gov.in or through Form 6 at your local ERO office</li>
+            <li data-translate="step1_3">You will receive an EPIC (Voter ID) card with a unique 10-character alphanumeric code</li>
+            <li data-translate="step1_4">Check your name in the electoral roll before election day</li>
+          </ul>
+          <div class="tip-box">
+            <strong data-translate="tip">💡 Tip:</strong> <span data-translate="step1_tip">You can check your registration status by entering your EPIC number on the ECI portal anytime.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-step" data-step="2">
+        <h3><span class="step-icon">🏘️</span> <span data-translate="step2_title">Know Your Constituency</span></h3>
+        <div class="step-content">
+          <ul>
+            <li data-translate="step2_1">India is divided into 543 Parliamentary and ~4000 Assembly constituencies</li>
+            <li data-translate="step2_2">Your constituency is determined by your registered address</li>
+            <li data-translate="step2_3">Each constituency has multiple polling booths — you are assigned to a specific one</li>
+            <li data-translate="step2_4">You can only vote in your assigned constituency</li>
+          </ul>
+          <div class="tip-box">
+            <strong data-translate="tip">💡 Tip:</strong> <span data-translate="step2_tip">Use the "Find Booth" feature in Vote Saarthi to locate your assigned polling station.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-step" data-step="3">
+        <h3><span class="step-icon">📄</span> <span data-translate="step3_title">Election Day Preparation</span></h3>
+        <div class="step-content">
+          <ul>
+            <li data-translate="step3_1">Carry your Voter ID (EPIC card) — it is the primary identification document</li>
+            <li data-translate="step3_2">Alternative IDs accepted: Aadhaar, Passport, Driving License, PAN Card</li>
+            <li data-translate="step3_3">Polling hours are typically 7:00 AM to 6:00 PM (may vary by state)</li>
+            <li data-translate="step3_4">Wearing or carrying party symbols/material is prohibited near polling stations</li>
+            <li data-translate="step3_5">Employers must give paid leave on polling day — it's your legal right</li>
+          </ul>
+          <div class="tip-box">
+            <strong data-translate="tip">💡 Tip:</strong> <span data-translate="step3_tip">Vote early in the morning to avoid long queues. Check crowd levels on our Booth Finder!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-step" data-step="4">
+        <h3><span class="step-icon">🏛️</span> <span data-translate="step4_title">At the Polling Station</span></h3>
+        <div class="step-content">
+          <ul>
+            <li data-translate="step4_1">Join the queue — separate lines may exist for men, women, and senior citizens</li>
+            <li data-translate="step4_2">Show your Voter ID to the polling officer at the entry desk</li>
+            <li data-translate="step4_3">Your name is verified against the electoral roll</li>
+            <li data-translate="step4_4">Indelible ink is applied to your left index finger</li>
+            <li data-translate="step4_5">You receive a slip and proceed to the voting compartment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-step" data-step="5">
+        <h3><span class="step-icon">🖥️</span> <span data-translate="step5_title">Using the EVM & VVPAT</span></h3>
+        <div class="step-content">
+          <ul>
+            <li data-translate="step5_1">EVM (Electronic Voting Machine) displays candidate names, symbols, and party names</li>
+            <li data-translate="step5_2">Press the blue button next to your chosen candidate</li>
+            <li data-translate="step5_3">A beep confirms your vote, and a light glows next to the selected candidate</li>
+            <li data-translate="step5_4">VVPAT (Voter Verifiable Paper Audit Trail) shows a slip for 7 seconds with your choice</li>
+            <li data-translate="step5_5">The slip drops into a sealed box for verification if needed</li>
+          </ul>
+          <div class="tip-box">
+            <strong data-translate="tip">💡 Tip:</strong> <span data-translate="step5_tip">VVPAT lets you verify that your vote was recorded correctly. Check the slip before leaving!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-step" data-step="6">
+        <h3><span class="step-icon">✅</span> <span data-translate="step6_title">After Voting</span></h3>
+        <div class="step-content">
+          <ul>
+            <li data-translate="step6_1">The ink mark on your finger stays for about 2-3 weeks</li>
+            <li data-translate="step6_2">Exit the polling station — do not discuss your vote inside</li>
+            <li data-translate="step6_3">Results are typically announced within a few days after counting</li>
+            <li data-translate="step6_4">You can track results on the ECI website or news channels</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-step" data-step="7">
+        <h3><span class="step-icon">⚖️</span> <span data-translate="step7_title">Your Rights as a Voter</span></h3>
+        <div class="step-content">
+          <ul>
+            <li data-translate="step7_1">Right to vote by secret ballot — no one can see your choice</li>
+            <li data-translate="step7_2">Right to NOTA — you can choose "None of the Above" if unsatisfied</li>
+            <li data-translate="step7_3">Right to paid leave on election day from your employer</li>
+            <li data-translate="step7_4">Right to complain about malpractice to the Election Commission</li>
+            <li data-translate="step7_5">Right to accessibility — polling stations must be accessible to persons with disabilities</li>
+            <li data-translate="step7_6">No one can be denied entry to a polling station based on caste, religion, or gender</li>
+          </ul>
+          <div class="tip-box">
+            <strong data-translate="tip">💡 Tip:</strong> <span data-translate="step7_tip">Report any election violation by calling the ECI helpline: 1950</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/translate.js"></script>
+  <script src="/js/guide.js"></script>
+</body>
+</html>

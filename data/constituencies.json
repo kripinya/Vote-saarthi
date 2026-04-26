@@ -1,0 +1,123 @@
+{
+  "delhi-central": {
+    "name": "New Delhi Central",
+    "state": "Delhi",
+    "centerLat": 28.6139,
+    "centerLng": 77.209,
+    "booths": [
+      {"id": "DC-B001", "name": "Govt. Boys Sr. Sec. School, Barakhamba", "address": "Barakhamba Road, Near Mandi House Metro", "lat": 28.6328, "lng": 77.2197, "crowdLevel": "low", "estimatedWait": "10 min", "capacity": 500, "currentFootfall": 120},
+      {"id": "DC-B002", "name": "Community Hall, Connaught Place", "address": "Block A, Connaught Place", "lat": 28.6315, "lng": 77.2167, "crowdLevel": "high", "estimatedWait": "45 min", "capacity": 400, "currentFootfall": 350},
+      {"id": "DC-B003", "name": "Municipal Primary School, Patel Nagar", "address": "Patel Nagar, Near Metro Station", "lat": 28.6508, "lng": 77.1712, "crowdLevel": "moderate", "estimatedWait": "25 min", "capacity": 600, "currentFootfall": 310}
+    ]
+  },
+  "ahmedabad-east": {
+    "name": "Ahmedabad East",
+    "state": "Gujarat",
+    "centerLat": 23.0225,
+    "centerLng": 72.5714,
+    "booths": [
+      {"id": "AE-B001", "name": "Sardar Patel Vidyalaya", "address": "CG Road, Navrangpura", "lat": 23.035, "lng": 72.56, "crowdLevel": "low", "estimatedWait": "8 min", "capacity": 450, "currentFootfall": 90},
+      {"id": "AE-B002", "name": "Gujarat Vidyapith Hall", "address": "Ashram Road", "lat": 23.04, "lng": 72.58, "crowdLevel": "moderate", "estimatedWait": "20 min", "capacity": 500, "currentFootfall": 270}
+    ]
+  },
+  "chennai-south": {
+    "name": "Chennai South",
+    "state": "Tamil Nadu",
+    "centerLat": 13.0478,
+    "centerLng": 80.2089,
+    "booths": [
+      {"id": "CS-B001", "name": "Corporation School, T. Nagar", "address": "Panagal Park, T. Nagar", "lat": 13.0418, "lng": 80.2341, "crowdLevel": "moderate", "estimatedWait": "20 min", "capacity": 550, "currentFootfall": 280},
+      {"id": "CS-B002", "name": "Community Hall, Mylapore", "address": "Luz Church Road, Mylapore", "lat": 13.0339, "lng": 80.2676, "crowdLevel": "low", "estimatedWait": "12 min", "capacity": 400, "currentFootfall": 100}
+    ]
+  },
+  "hyderabad-central": {
+    "name": "Hyderabad Central",
+    "state": "Telangana",
+    "centerLat": 17.385,
+    "centerLng": 78.4867,
+    "booths": [
+      {"id": "HC-B001", "name": "Nizam College Hall", "address": "Basheerbagh", "lat": 17.395, "lng": 78.48, "crowdLevel": "low", "estimatedWait": "10 min", "capacity": 600, "currentFootfall": 150},
+      {"id": "HC-B002", "name": "Govt. School, Banjara Hills", "address": "Road No. 12, Banjara Hills", "lat": 17.4156, "lng": 78.4485, "crowdLevel": "moderate", "estimatedWait": "22 min", "capacity": 500, "currentFootfall": 290}
+    ]
+  },
+  "kolkata-north": {
+    "name": "Kolkata North",
+    "state": "West Bengal",
+    "centerLat": 22.5726,
+    "centerLng": 88.3639,
+    "booths": [
+      {"id": "KN-B001", "name": "Presidency University Hall", "address": "College Street", "lat": 22.578, "lng": 88.363, "crowdLevel": "moderate", "estimatedWait": "18 min", "capacity": 500, "currentFootfall": 260},
+      {"id": "KN-B002", "name": "Town Hall, Esplanade", "address": "Esplanade Row East", "lat": 22.564, "lng": 88.352, "crowdLevel": "low", "estimatedWait": "7 min", "capacity": 600, "currentFootfall": 80}
+    ]
+  },
+  "pune-city": {
+    "name": "Pune City",
+    "state": "Maharashtra",
+    "centerLat": 18.5204,
+    "centerLng": 73.8567,
+    "booths": [
+      {"id": "PC-B001", "name": "Fergusson College Hall", "address": "FC Road, Shivajinagar", "lat": 18.5246, "lng": 73.8389, "crowdLevel": "low", "estimatedWait": "9 min", "capacity": 550, "currentFootfall": 110},
+      {"id": "PC-B002", "name": "Tilak Smarak Mandir", "address": "Tilak Road", "lat": 18.5074, "lng": 73.8538, "crowdLevel": "moderate", "estimatedWait": "22 min", "capacity": 450, "currentFootfall": 250}
+    ]
+  },
+  "lucknow-central": {
+    "name": "Lucknow Central",
+    "state": "Uttar Pradesh",
+    "centerLat": 26.8467,
+    "centerLng": 80.9462,
+    "booths": [
+      {"id": "LC-B001", "name": "Lucknow University Hall", "address": "University Road", "lat": 26.855, "lng": 80.949, "crowdLevel": "moderate", "estimatedWait": "15 min", "capacity": 600, "currentFootfall": 300},
+      {"id": "LC-B002", "name": "Govt. Inter College, Hazratganj", "address": "Hazratganj", "lat": 26.851, "lng": 80.943, "crowdLevel": "low", "estimatedWait": "10 min", "capacity": 500, "currentFootfall": 130}
+    ]
+  },
+  "trivandrum-central": {
+    "name": "Thiruvananthapuram Central",
+    "state": "Kerala",
+    "centerLat": 8.5241,
+    "centerLng": 76.9366,
+    "booths": [
+      {"id": "TC-B001", "name": "Govt. Model School, Thycaud", "address": "Thycaud", "lat": 8.505, "lng": 76.955, "crowdLevel": "low", "estimatedWait": "8 min", "capacity": 400, "currentFootfall": 70},
+      {"id": "TC-B002", "name": "University College Hall", "address": "Palayam", "lat": 8.51, "lng": 76.95, "crowdLevel": "moderate", "estimatedWait": "20 min", "capacity": 450, "currentFootfall": 230}
+    ]
+  },
+  "amritsar-north": {
+    "name": "Amritsar North",
+    "state": "Punjab",
+    "centerLat": 31.634,
+    "centerLng": 74.8723,
+    "booths": [
+      {"id": "AN-B001", "name": "Khalsa College Hall", "address": "GT Road", "lat": 31.64, "lng": 74.868, "crowdLevel": "low", "estimatedWait": "11 min", "capacity": 500, "currentFootfall": 120},
+      {"id": "AN-B002", "name": "DAV Public School", "address": "Lawrence Road", "lat": 31.63, "lng": 74.88, "crowdLevel": "high", "estimatedWait": "38 min", "capacity": 350, "currentFootfall": 310}
+    ]
+  },
+  "bangalore-south": {
+    "name": "Bengaluru South",
+    "state": "Karnataka",
+    "centerLat": 12.9716,
+    "centerLng": 77.5946,
+    "booths": [
+      {"id": "BS-B001", "name": "National College Hall", "address": "Basavanagudi", "lat": 12.948, "lng": 77.574, "crowdLevel": "moderate", "estimatedWait": "18 min", "capacity": 500, "currentFootfall": 260},
+      {"id": "BS-B002", "name": "Govt. High School, Jayanagar", "address": "Jayanagar 4th Block", "lat": 12.925, "lng": 77.583, "crowdLevel": "low", "estimatedWait": "6 min", "capacity": 450, "currentFootfall": 60}
+    ]
+  },
+  "mumbai-south": {
+    "name": "Mumbai South",
+    "state": "Maharashtra",
+    "centerLat": 18.9322,
+    "centerLng": 72.8264,
+    "booths": [
+      {"id": "MS-B001", "name": "St. Xavier's College Hall", "address": "Dhobi Talao", "lat": 18.9432, "lng": 72.8307, "crowdLevel": "high", "estimatedWait": "48 min", "capacity": 400, "currentFootfall": 375},
+      {"id": "MS-B002", "name": "Municipal School, Colaba", "address": "Colaba Causeway", "lat": 18.9067, "lng": 72.8147, "crowdLevel": "low", "estimatedWait": "12 min", "capacity": 350, "currentFootfall": 85}
+    ]
+  },
+  "jaipur-city": {
+    "name": "Jaipur City",
+    "state": "Rajasthan",
+    "centerLat": 26.9124,
+    "centerLng": 75.7873,
+    "booths": [
+      {"id": "JC-B001", "name": "Rajasthan University Hall", "address": "JLN Marg", "lat": 26.905, "lng": 75.803, "crowdLevel": "moderate", "estimatedWait": "20 min", "capacity": 550, "currentFootfall": 280},
+      {"id": "JC-B002", "name": "Govt. School, MI Road", "address": "MI Road", "lat": 26.92, "lng": 75.79, "crowdLevel": "low", "estimatedWait": "10 min", "capacity": 400, "currentFootfall": 90}
+    ]
+  }
+}

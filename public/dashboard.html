@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vote Saarthi Dashboard - Access election guides, find your polling booth, and cast your vote securely.">
+  <title>Dashboard — Vote Saarthi</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="bg-animation"></div>
+  <nav id="navbar"></nav>
+
+  <main class="dashboard">
+    <div class="session-bar">
+      <div class="session-timer">
+        <span class="timer-dot"></span>
+        <span data-translate="session_active">Session Active</span> —
+        <span id="sessionTimer">30:00</span>
+      </div>
+      <span id="voterState" style="color:var(--saffron);"></span>
+    </div>
+
+    <div class="glass-card welcome-banner">
+      <h1 id="welcomeMsg" data-translate="welcome_msg">Welcome!</h1>
+      <p id="welcomeSub" class="subtitle" data-translate="welcome_sub">Your election journey starts here</p>
+      <div class="constituency-badge" id="constBadge">
+        📍 <span id="constName">Loading...</span>
+      </div>
+    </div>
+
+    <div class="action-grid">
+      <div class="glass-card action-card" onclick="window.location.href='/guide'" id="card-guide">
+        <div class="card-glow"></div>
+        <div class="icon">📋</div>
+        <h3 data-translate="card_guide_title">Election Process Guide</h3>
+        <p data-translate="card_guide_desc">Step-by-step walkthrough of the voting process, your rights, and what to expect</p>
+      </div>
+      <div class="glass-card action-card" onclick="window.location.href='/booth-finder'" id="card-booth">
+        <div class="card-glow"></div>
+        <div class="icon">🗺️</div>
+        <h3 data-translate="card_booth_title">Find Polling Booth</h3>
+        <p data-translate="card_booth_desc">Locate your nearest booth on the map, check crowd levels, and get directions</p>
+      </div>
+      <div class="glass-card action-card" onclick="goToVote()" id="card-vote">
+        <div class="card-glow"></div>
+        <div class="icon">🗳️</div>
+        <h3 data-translate="card_vote_title">Cast Your Vote</h3>
+        <p data-translate="card_vote_desc">Vote securely with end-to-end encryption. Only the Election Commission can see your choice</p>
+      </div>
+      <div class="glass-card action-card" onclick="showTimeline()" id="card-timeline">
+        <div class="card-glow"></div>
+        <div class="icon">📊</div>
+        <h3 data-translate="card_timeline_title">Election Timeline</h3>
+        <p data-translate="card_timeline_desc">Key dates, phases, and milestones for the current election cycle</p>
+      </div>
+    </div>
+
+    <!-- Timeline Modal -->
+    <div class="modal-overlay" id="timelineModal">
+      <div class="modal" style="max-width:600px;">
+        <h2 data-translate="timeline_title">📊 Election Timeline 2026</h2>
+        <div style="margin:1.5rem 0;">
+          <div class="timeline" style="padding-left:2.5rem;">
+            <div class="timeline-step completed" data-step="1" style="margin-bottom:1rem;">
+              <h3 style="font-size:0.95rem;" data-translate="tl_1">Notification & Nomination</h3>
+              <p style="font-size:0.8rem;color:var(--text-secondary);">March 15 - March 28</p>
+            </div>
+            <div class="timeline-step completed" data-step="2" style="margin-bottom:1rem;">
+              <h3 style="font-size:0.95rem;" data-translate="tl_2">Scrutiny of Nominations</h3>
+              <p style="font-size:0.8rem;color:var(--text-secondary);">March 29 - April 2</p>
+            </div>
+            <div class="timeline-step completed" data-step="3" style="margin-bottom:1rem;">
+              <h3 style="font-size:0.95rem;" data-translate="tl_3">Campaign Period</h3>
+              <p style="font-size:0.8rem;color:var(--text-secondary);">April 3 - April 23</p>
+            </div>
+            <div class="timeline-step" data-step="4" style="margin-bottom:1rem;">
+              <h3 style="font-size:0.95rem;color:var(--saffron);" data-translate="tl_4">🗳️ Polling Day</h3>
+              <p style="font-size:0.8rem;color:var(--saffron);">April 25, 2026</p>
+            </div>
+            <div class="timeline-step" data-step="5" style="margin-bottom:1rem;">
+              <h3 style="font-size:0.95rem;" data-translate="tl_5">Vote Counting</h3>
+              <p style="font-size:0.8rem;color:var(--text-secondary);">April 28, 2026</p>
+            </div>
+            <div class="timeline-step" data-step="6">
+              <h3 style="font-size:0.95rem;" data-translate="tl_6">Results Declaration</h3>
+              <p style="font-size:0.8rem;color:var(--text-secondary);">April 30, 2026</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-outline" onclick="document.getElementById('timelineModal').classList.remove('active')" style="width:100%;justify-content:center;" data-translate="close_btn">Close</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/translate.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

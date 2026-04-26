@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find your nearest polling booth with crowd levels and get directions using Google Maps.">
+  <title>Find Polling Booth — Vote Saarthi</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="bg-animation"></div>
+  <nav id="navbar"></nav>
+
+  <main class="booth-finder">
+    <aside class="booth-sidebar">
+      <h2 data-translate="booth_title">🗺️ Polling Booths</h2>
+      <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;" id="constLabel" data-translate="booth_your_const">Your Constituency</p>
+
+      <div class="recommend-banner" id="recommendBanner" style="display:none;">
+        <strong>✨ Recommended:</strong> <span id="recommendText"></span>
+      </div>
+
+      <div class="booth-filters">
+        <button class="filter-btn active" onclick="filterBooths('all')" data-translate="filter_all">All</button>
+        <button class="filter-btn" onclick="filterBooths('low')" data-translate="filter_low">🟢 Low</button>
+        <button class="filter-btn" onclick="filterBooths('moderate')" data-translate="filter_mod">🟡 Moderate</button>
+        <button class="filter-btn" onclick="filterBooths('high')" data-translate="filter_high">🔴 High</button>
+      </div>
+
+      <div class="booth-list" id="boothList">
+        <p style="color:var(--text-muted);">Loading booths...</p>
+      </div>
+    </aside>
+
+    <div class="map-container">
+      <div id="map"></div>
+      <div class="map-demo-overlay" id="mapDemoOverlay" style="display:none;">
+        <div>
+          <div style="font-size:3rem;margin-bottom:1rem;">🗺️</div>
+          <h2 data-translate="map_demo_title">Map Preview Mode</h2>
+          <p style="color:var(--text-secondary);margin-bottom:1rem;" data-translate="map_demo_desc">Add a Google Maps API key in .env to enable the interactive map with directions.</p>
+          <p style="color:var(--text-secondary);font-size:0.85rem;">Booth locations are shown in the sidebar →</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/translate.js"></script>
+  <script src="/js/booth-finder.js"></script>
+</body>
+</html>

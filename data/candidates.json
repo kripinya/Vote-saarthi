@@ -1,0 +1,63 @@
+{
+  "delhi-central": [
+    {"id": "C001", "name": "Aarav Kumar", "party": "National Progress Party", "symbol": "🌻", "age": 52, "manifesto": "Focus on infrastructure development, clean water, and smart city initiatives."},
+    {"id": "C002", "name": "Sunita Verma", "party": "People's Welfare Alliance", "symbol": "🤝", "age": 45, "manifesto": "Women empowerment, education reform, and affordable healthcare."},
+    {"id": "C003", "name": "Rajesh Gupta", "party": "Democratic Front", "symbol": "⚖️", "age": 60, "manifesto": "Employment generation, industrial growth, and farmer welfare."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "ahmedabad-east": [
+    {"id": "C004", "name": "Hardik Mehta", "party": "Gujarat Development Party", "symbol": "🏗️", "age": 48, "manifesto": "Industrial corridors, startup ecosystem, and urban renewal."},
+    {"id": "C005", "name": "Reshma Shah", "party": "Social Justice League", "symbol": "🕊️", "age": 39, "manifesto": "Social equality, minority rights, and public transport improvement."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "chennai-south": [
+    {"id": "C006", "name": "Karthik Subramanian", "party": "Tamil Progressive Front", "symbol": "🌾", "age": 55, "manifesto": "Water conservation, IT sector growth, and cultural preservation."},
+    {"id": "C007", "name": "Lakshmi Natarajan", "party": "People's Democratic Movement", "symbol": "📚", "age": 43, "manifesto": "Education access, women's safety, and healthcare modernization."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "hyderabad-central": [
+    {"id": "C008", "name": "Mohammed Aziz", "party": "Telangana Rising", "symbol": "🌅", "age": 50, "manifesto": "Tech hub development, metro expansion, and lake conservation."},
+    {"id": "C009", "name": "Swathi Reddy", "party": "Green Future Party", "symbol": "🌿", "age": 36, "manifesto": "Environmental protection, renewable energy, and green buildings."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "kolkata-north": [
+    {"id": "C010", "name": "Debashis Mukherjee", "party": "Bengal Renaissance Party", "symbol": "🎭", "age": 58, "manifesto": "Cultural revival, education hubs, and tourism development."},
+    {"id": "C011", "name": "Anita Das", "party": "Workers' Unity Front", "symbol": "⚒️", "age": 47, "manifesto": "Labor rights, minimum wage increase, and housing for all."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "pune-city": [
+    {"id": "C012", "name": "Amit Joshi", "party": "Maharashtra Forward Bloc", "symbol": "🚀", "age": 44, "manifesto": "IT park expansion, public transit, and education excellence."},
+    {"id": "C013", "name": "Pooja Pawar", "party": "Social Harmony Party", "symbol": "🌈", "age": 38, "manifesto": "Inclusive growth, healthcare access, and clean energy."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "lucknow-central": [
+    {"id": "C014", "name": "Anil Tiwari", "party": "UP Development Forum", "symbol": "🏛️", "age": 56, "manifesto": "Heritage conservation, road infrastructure, and skill development."},
+    {"id": "C015", "name": "Neha Yadav", "party": "Youth Progress Movement", "symbol": "💡", "age": 32, "manifesto": "Youth employment, digital literacy, and startup funding."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "trivandrum-central": [
+    {"id": "C016", "name": "Vishnu Pillai", "party": "Kerala Progress Coalition", "symbol": "🌴", "age": 49, "manifesto": "Tourism boost, fishermen welfare, and healthcare innovation."},
+    {"id": "C017", "name": "Sreeja Menon", "party": "Democratic People's Party", "symbol": "📖", "age": 41, "manifesto": "Education reform, IT corridor development, and social security."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "amritsar-north": [
+    {"id": "C018", "name": "Harjinder Singh", "party": "Punjab Prosperity Party", "symbol": "🌾", "age": 53, "manifesto": "Agricultural reform, water management, and rural development."},
+    {"id": "C019", "name": "Manpreet Kaur", "party": "New Dawn Alliance", "symbol": "🌅", "age": 37, "manifesto": "Women's empowerment, drug-free Punjab, and sports infrastructure."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "bangalore-south": [
+    {"id": "C020", "name": "Suresh Rao", "party": "Karnataka Tech Alliance", "symbol": "💻", "age": 46, "manifesto": "IT infrastructure, traffic solutions, and lake rejuvenation."},
+    {"id": "C021", "name": "Divya Shetty", "party": "Green Karnataka Movement", "symbol": "🌳", "age": 34, "manifesto": "Tree cover restoration, public parks, and waste management."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "mumbai-south": [
+    {"id": "C022", "name": "Vikash Patil", "party": "Mumbai First Party", "symbol": "🏙️", "age": 51, "manifesto": "Housing for all, coastal road completion, and flood management."},
+    {"id": "C023", "name": "Fatima Sheikh", "party": "Inclusive Progress Front", "symbol": "🤲", "age": 40, "manifesto": "Affordable housing, public health, and minority welfare."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ],
+  "jaipur-city": [
+    {"id": "C024", "name": "Bhavesh Sharma", "party": "Rajasthan Heritage Alliance", "symbol": "🏰", "age": 54, "manifesto": "Tourism development, heritage preservation, and solar energy."},
+    {"id": "C025", "name": "Nandini Rathore", "party": "Desert Bloom Party", "symbol": "🌺", "age": 35, "manifesto": "Water harvesting, women's education, and artisan support."},
+    {"id": "NOTA", "name": "None of the Above", "party": "NOTA", "symbol": "✖️", "age": null, "manifesto": "Choose this if you do not wish to vote for any candidate."}
+  ]
+}
