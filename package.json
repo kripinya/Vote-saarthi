@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "test": "jest"
+    "test": "jest --coverage --passWithNoTests"
   },
   "keywords": [
     "election",
@@ -19,15 +19,22 @@
   "author": "Vote Saarthi Team",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/bigquery": "^8.3.0",
+    "@google-cloud/functions": "^4.2.2",
+    "@google-cloud/logging": "^11.2.1",
     "@google-cloud/translate": "^9.4.1",
     "@google/generative-ai": "^0.24.1",
     "cors": "^2.8.6",
+    "csurf": "^1.11.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
     "express-rate-limit": "^7.5.0",
     "express-session": "^1.18.1",
     "googleapis": "^171.4.0",
-    "helmet": "^8.0.0"
+    "helmet": "^8.0.0",
+    "hpp": "^0.2.3",
+    "xss-clean": "^0.1.4"
   },
   "devDependencies": {
     "jest": "^30.3.0",
