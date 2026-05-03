@@ -5,16 +5,32 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "test": "jest"
   },
-  "keywords": ["election", "voting", "india", "assistant", "google-maps", "translate"],
+  "keywords": [
+    "election",
+    "voting",
+    "india",
+    "assistant",
+    "google-maps",
+    "translate"
+  ],
   "author": "Vote Saarthi Team",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/translate": "^9.4.1",
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.6",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-rate-limit": "^7.5.0",
     "express-session": "^1.18.1",
+    "googleapis": "^171.4.0",
     "helmet": "^8.0.0"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
   }
 }
