@@ -4,6 +4,8 @@ const session = require('express-session');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const path = require('path');
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first'); // Fix for ENOTFOUND with Node fetch
 const { generateKeyPair, getPublicKey, decryptVote, generateReceiptHash } = require('./crypto/keys');
 
 const app = express();
@@ -23,11 +25,11 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "https://maps.googleapis.com", "https://maps.gstatic.com"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https://maps.googleapis.com", "https://maps.gstatic.com", "https://unpkg.com"],
       scriptSrcAttr: ["'unsafe-inline'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://unpkg.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      imgSrc: ["'self'", "data:", "https://maps.googleapis.com", "https://maps.gstatic.com", "https://*.google.com", "https://*.googleapis.com"],
+      imgSrc: ["'self'", "data:", "https://maps.googleapis.com", "https://maps.gstatic.com", "https://*.google.com", "https://*.googleapis.com", "https://*.tile.openstreetmap.org", "https://unpkg.com"],
       connectSrc: ["'self'", "https://maps.googleapis.com", "https://translation.googleapis.com"],
       frameSrc: ["https://www.google.com", "https://maps.google.com"]
     }
@@ -125,20 +127,17 @@ function requireAuth(req, res, next) {
 app.post('/api/translate', requireAuth, async (req, res) => {
   const { texts, targetLang } = req.body;
   if (!texts || !targetLang) return res.status(400).json({ error: 'Missing texts or targetLang' });
-  const apiKey = process.env.GOOGLE_TRANSLATE_API_KEY;
-  if (!apiKey || apiKey === 'your_google_translate_api_key_here') {
-    // Fallback: return original texts when no API key configured
-    return res.json({ translations: texts.map(t => ({ translatedText: t, detectedSourceLanguage: 'en' })) });
-  }
+  
   try {
-    const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ q: texts, target: targetLang, source: 'en', format: 'text' })
-    });
-    const data = await response.json();
-    if (data.error) throw new Error(data.error.message);
-    res.json({ translations: data.data.translations });
+    const translations = await Promise.all(texts.map(async (text) => {
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      // data[0] is an array of sentence translations
+      const translatedText = data[0].map(item => item[0]).join('');
+      return { translatedText, detectedSourceLanguage: 'en' };
+    }));
+    res.json({ translations });
   } catch (err) {
     console.error('Translation error:', err.message);
     res.json({ translations: texts.map(t => ({ translatedText: t })), fallback: true });

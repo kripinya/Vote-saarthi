@@ -30,14 +30,9 @@ async function initBoothFinder() {
       renderBoothList(allBooths);
     }
 
-    // Load Google Maps
-    const keyRes = await apiFetch('/api/maps-key');
-    if (keyRes.key) {
-      loadGoogleMaps(keyRes.key);
-    } else {
-      showDemoMap();
-    }
-
+    // Load Leaflet Map
+    showMap();
+    
     // Show recommendation
     showRecommendation();
   } catch (err) {
@@ -108,79 +103,40 @@ function selectBooth(index) {
   if (el) el.classList.add('selected');
 
   const booth = allBooths[index];
-  if (map && mapsApiLoaded) {
-    map.panTo({ lat: booth.lat, lng: booth.lng });
-    map.setZoom(16);
-    // Show directions if user position available
-    if (userPosition && directionsRenderer) {
-      const directionsService = new google.maps.DirectionsService();
-      directionsService.route({
-        origin: userPosition,
-        destination: { lat: booth.lat, lng: booth.lng },
-        travelMode: google.maps.TravelMode.DRIVING
-      }, (result, status) => {
-        if (status === 'OK') directionsRenderer.setDirections(result);
-      });
-    }
+  if (map) {
+    map.setView([booth.lat, booth.lng], 16);
+    markers[index].openPopup();
   }
 }
 
-function loadGoogleMaps(apiKey) {
-  const script = document.createElement('script');
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
-  script.async = true;
-  script.defer = true;
-  document.head.appendChild(script);
-}
-
-function initMap() {
-  mapsApiLoaded = true;
+function showMap() {
   document.getElementById('mapDemoOverlay').style.display = 'none';
 
-  const center = { lat: boothData.centerLat, lng: boothData.centerLng };
-  map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13, center,
-    styles: [
-      { elementType: 'geometry', stylers: [{ color: '#1a1a2e' }] },
-      { elementType: 'labels.text.stroke', stylers: [{ color: '#1a1a2e' }] },
-      { elementType: 'labels.text.fill', stylers: [{ color: '#8888aa' }] },
-      { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#2a2a4a' }] },
-      { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#0e1a3a' }] }
-    ]
-  });
-
-  directionsRenderer = new google.maps.DirectionsRenderer({ map, suppressMarkers: false });
+  const center = [boothData.centerLat, boothData.centerLng];
+  map = L.map('map').setView(center, 13);
+  
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 19
+  }).addTo(map);
 
   const crowdColors = { low: '#2ed573', moderate: '#ffa502', high: '#ff4757' };
+  
   allBooths.forEach((booth, i) => {
-    const marker = new google.maps.Marker({
-      position: { lat: booth.lat, lng: booth.lng },
-      map, title: booth.name,
-      icon: { path: google.maps.SymbolPath.CIRCLE, scale: 10, fillColor: crowdColors[booth.crowdLevel], fillOpacity: 0.9, strokeWeight: 2, strokeColor: '#fff' }
-    });
-    const infoWindow = new google.maps.InfoWindow({
-      content: `<div style="color:#333;"><strong>${booth.name}</strong><br>${booth.address}<br><span style="color:${crowdColors[booth.crowdLevel]};">${booth.crowdLevel} crowd</span> • ${booth.estimatedWait}<br><button onclick="selectBooth(${i})" style="margin-top:5px;padding:4px 12px;background:#FF9933;color:#fff;border:none;border-radius:4px;cursor:pointer;">Get Directions</button></div>`
-    });
-    marker.addListener('click', () => infoWindow.open(map, marker));
+    const markerHtml = `<div style="background-color:${crowdColors[booth.crowdLevel]};width:16px;height:16px;border-radius:50%;border:2px solid white;box-shadow:0 0 4px rgba(0,0,0,0.4);"></div>`;
+    const icon = L.divIcon({ html: markerHtml, className: 'custom-marker', iconSize: [16,16], iconAnchor: [8,8] });
+    
+    const marker = L.marker([booth.lat, booth.lng], { icon }).addTo(map);
+    
+    const popupContent = `<div style="color:#333;"><strong>${booth.name}</strong><br>${booth.address}<br><span style="color:${crowdColors[booth.crowdLevel]};">${booth.crowdLevel} crowd</span> • ${booth.estimatedWait}<br><button onclick="selectBooth(${i})" style="margin-top:5px;padding:4px 12px;background:var(--nic-blue);color:#fff;border:none;border-radius:4px;cursor:pointer;">Focus</button></div>`;
+    
+    marker.bindPopup(popupContent);
     markers.push(marker);
   });
 
-  // User location marker
   if (userPosition) {
-    new google.maps.Marker({
-      position: userPosition, map, title: 'Your Location',
-      icon: { path: google.maps.SymbolPath.CIRCLE, scale: 8, fillColor: '#3498db', fillOpacity: 1, strokeWeight: 3, strokeColor: '#fff' }
-    });
+    const userIcon = L.divIcon({ html: '<div style="background-color:#3498db;width:14px;height:14px;border-radius:50%;border:2px solid white;"></div>', className: 'user-marker', iconSize:[14,14]});
+    L.marker([userPosition.lat, userPosition.lng], { icon: userIcon }).addTo(map).bindPopup('Your Location');
   }
 }
-
-function showDemoMap() {
-  document.getElementById('mapDemoOverlay').style.display = 'flex';
-  // Render a simple canvas map as fallback
-  const mapEl = document.getElementById('map');
-  mapEl.style.background = 'linear-gradient(135deg, #0a0e27 0%, #111640 50%, #0a0e27 100%)';
-}
-
-// Expose initMap globally for Google Maps callback
-window.initMap = initMap;
 document.addEventListener('DOMContentLoaded', initBoothFinder);
