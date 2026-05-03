@@ -516,3 +516,41 @@ a:hover { color: var(--saffron-dark); }
   .guide-container { padding: 1rem; }
   .vote-container { padding: 1rem; }
 }
+
+/* --- Voice Assistant FAB --- */
+.voice-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--nic-blue);
+  color: white;
+  border: 3px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.voice-fab:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: var(--saffron);
+}
+
+.voice-fab.speaking {
+  background: var(--green);
+  animation: pulse-ring 1.5s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(19, 136, 8, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(19, 136, 8, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(19, 136, 8, 0); }
+}
