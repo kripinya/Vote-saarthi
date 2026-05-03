@@ -55,8 +55,10 @@ function renderNavbar(activePage) {
   const savedLang = localStorage.getItem('voteSaarthiLang') || 'en';
   const sel = document.getElementById('globalLangSelect');
   if (sel) sel.value = savedLang;
+}
 
-  // Inject Voice Assistant FAB globally
+// Inject Voice Assistant FAB globally on ALL pages
+function initVoiceAssistant() {
   if (!document.getElementById('voiceAssistantBtn')) {
     const fab = document.createElement('button');
     fab.id = 'voiceAssistantBtn';
@@ -74,6 +76,8 @@ function renderNavbar(activePage) {
     }
   }
 }
+
+document.addEventListener('DOMContentLoaded', initVoiceAssistant);
 
 // Intercept language changes to notify assistant
 const originalChangeLanguage = window.changeLanguage;
