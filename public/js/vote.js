@@ -17,8 +17,9 @@ async function initVoting() {
   }
 
   const constId = voterSession.voter.constituency;
-  document.getElementById('voteConstLabel').textContent =
-    `Constituency: ${constId.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}`;
+  const formattedConst = constId.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+  document.getElementById('voteConstLabel').innerHTML =
+    `<span data-translate="const_label">Constituency:</span> <span data-translate="const_${constId}">${formattedConst}</span>`;
 
   try {
     // Fetch candidates and public key in parallel
@@ -47,9 +48,9 @@ function renderCandidates() {
       <div class="glass-card candidate-card" onclick="selectCandidateCard(${i})" id="cand-${i}">
         <div class="symbol">${c.symbol}</div>
         <div class="info">
-          <h3>${c.name}</h3>
-          <p class="party">${c.party}</p>
-          <p class="manifesto">${c.manifesto}</p>
+          <h3 data-translate="cand_${c.id}_name">${c.name}</h3>
+          <p class="party" data-translate="cand_${c.id}_party">${c.party}</p>
+          <p class="manifesto" data-translate="cand_${c.id}_manifesto">${c.manifesto}</p>
         </div>
         <div class="radio"></div>
       </div>
@@ -59,6 +60,10 @@ function renderCandidates() {
   document.getElementById('voteActions').style.display = 'block';
   document.getElementById('castVoteBtn').disabled = true;
   document.getElementById('castVoteBtn').style.opacity = '0.5';
+  
+  if (window.scanDynamicTranslations) {
+    window.scanDynamicTranslations();
+  }
 }
 
 function selectCandidateCard(index) {
@@ -160,11 +165,14 @@ function showAlreadyVoted() {
   el.innerHTML = `
     <div class="glass-card receipt-card" style="margin-top:2rem;">
       <div class="check">✅</div>
-      <h2 style="color:var(--success);">You Have Already Voted</h2>
-      <p style="color:var(--text-secondary);">Your encrypted vote was successfully recorded in this session.</p>
-      <button class="btn btn-saffron" onclick="window.location.href='/dashboard'" style="margin-top:1.5rem;">Return to Dashboard</button>
+      <h2 style="color:var(--success);" data-translate="already_voted_title">You Have Already Voted</h2>
+      <p style="color:var(--text-secondary);" data-translate="already_voted_msg">Your encrypted vote was successfully recorded in this session.</p>
+      <button class="btn btn-saffron" onclick="window.location.href='/dashboard'" style="margin-top:1.5rem;" data-translate="already_voted_btn">Return to Dashboard</button>
     </div>
   `;
+  if (window.scanDynamicTranslations) {
+    window.scanDynamicTranslations();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initVoting);

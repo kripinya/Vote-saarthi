@@ -227,7 +227,48 @@ app.post('/api/translate', requireAuth, async (req, res) => {
       "Election Guide": "चुनाव मार्गदर्शिका",
       "Find Booth": "मतदान केंद्र खोजें",
       "Cast Vote": "अपना वोट डालें",
-      "Logout": "लॉग आउट"
+      "Logout": "लॉग आउट",
+      
+      "or choose": "या चुनें",
+      "Constituency:": "निर्वाचन क्षेत्र:",
+      "Chennai South": "चेन्नई दक्षिण",
+      "Delhi Central": "मध्य दिल्ली",
+      "Ahmedabad East": "अहमदाबाद पूर्व",
+      
+      "None of the Above": "इनमें से कोई नहीं",
+      "NOTA": "नोटा",
+      "Choose this if you do not wish to vote for any candidate.": "यदि आप किसी भी उम्मीदवार को वोट नहीं देना चाहते हैं तो इसे चुनें।",
+      
+      "Karthik Subramanian": "कार्तिक सुब्रमण्यम",
+      "Tamil Progressive Front": "तमिल प्रोग्रेसिव फ्रंट",
+      "Water conservation, IT sector growth, and cultural preservation.": "जल संरक्षण, आईटी क्षेत्र का विकास और सांस्कृतिक संरक्षण।",
+      
+      "Lakshmi Natarajan": "लक्ष्मी नटराजन",
+      "People's Democratic Movement": "पीपुल्स डेमोक्रेटिक मूवमेंट",
+      "Education access, women's safety, and healthcare modernization.": "शिक्षा तक पहुंच, महिलाओं की सुरक्षा और स्वास्थ्य सेवा का आधुनिकीकरण।",
+      
+      "Aarav Kumar": "आरव कुमार",
+      "National Progress Party": "नेशनल प्रोग्रेस पार्टी",
+      "Focus on infrastructure development, clean water, and smart city initiatives.": "बुनियादी ढांचे के विकास, स्वच्छ जल और स्मार्ट सिटी पहल पर ध्यान।",
+      
+      "Sunita Verma": "सुनीता वर्मा",
+      "People's Welfare Alliance": "पीपुल्स वेलफेयर अलायंस",
+      "Women empowerment, education reform, and affordable healthcare.": "महिला सशक्तिकरण, शिक्षा सुधार और किफायती स्वास्थ्य सेवा।",
+      
+      "Rajesh Gupta": "राजेश गुप्ता",
+      "Democratic Front": "डेमोक्रेटिक फ्रंट",
+      "Employment generation, industrial growth, and farmer welfare.": "रोजगार सृजन, औद्योगिक विकास और किसान कल्याण।",
+      
+      "Hardik Mehta": "हार्दिक मेहता",
+      "Gujarat Development Party": "गुजरात विकास पार्टी",
+      "Industrial corridors, startup ecosystem, and urban renewal.": "औद्योगिक गलियारे, स्टार्टअप इकोसिस्टम और शहरी नवीकरण।",
+      
+      "Reshma Shah": "रेशमा शाह",
+      "Social Justice League": "सोशल जस्टिस लीग",
+      "Social equality, minority rights, and public transport improvement.": "सामाजिक समानता, अल्पसंख्यक अधिकार और सार्वजनिक परिवहन सुधार।",
+      
+      "You Have Already Voted": "आप पहले ही वोट कर चुके हैं",
+      "Your encrypted vote was successfully recorded in this session.": "आपका एन्क्रिप्टेड वोट इस सत्र में सफलतापूर्वक दर्ज किया गया था।"
     },
     ta: {
       "Welcome!": "வரவேற்கிறோம்!",

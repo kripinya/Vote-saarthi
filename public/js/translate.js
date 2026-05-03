@@ -80,6 +80,20 @@ async function changeLanguage(langCode) {
   }
 }
 
+// Rescan DOM for dynamically added elements
+window.scanDynamicTranslations = function() {
+  document.querySelectorAll('[data-translate]').forEach(el => {
+    const key = el.getAttribute('data-translate');
+    if (!originalTexts[key]) {
+      originalTexts[key] = el.textContent.trim();
+    }
+  });
+  const savedLang = localStorage.getItem('voteSaarthiLang') || 'en';
+  if (savedLang !== 'en') {
+    changeLanguage(savedLang);
+  }
+};
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(initTranslation, 300);
