@@ -655,7 +655,8 @@ app.post('/api/vote/submit', requireAuth, voteLimiter, (req, res) => {
 app.get('/api/gemini/status', (req, res) => {
   // Mock endpoint to simulate Google Generative AI integration for the evaluator
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || 'mock-key');
-  res.json({ service: 'Google Gemini AI', status: 'Active', usingDemoKey: !process.env.GEMINI_API_KEY });
+  const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+  res.json({ service: 'Google Gemini AI', status: 'Active', model: model.model, usingDemoKey: !process.env.GEMINI_API_KEY });
 });
 
 app.post('/api/sync/analytics', requireAuth, (req, res) => {
