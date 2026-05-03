@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Vote Saarthi - Your intelligent election assistant. Login with your Voter ID to access election guides, find polling booths, and cast your vote securely.">
   <title>Vote Saarthi — Your Election Companion</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=2">
 </head>
 <body>
   <div class="bg-animation"></div>
 
   <div class="login-container">
-    <div class="glass-card login-card">
-      <div class="logo">🗳️</div>
-      <h1>Vote Saarthi</h1>
+    <div class="glass-card login-card" style="border-top: 4px solid var(--nic-blue);">
+      <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏛️</div>
+      <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); margin-bottom: 0.5rem;" data-translate="gov_header">Government of India | Election Commission</h3>
+      <h1 style="color: var(--nic-blue);">Vote Saarthi</h1>
       <div class="tricolor-line"></div>
-      <p class="subtitle" data-translate="login_subtitle">Your trusted election companion</p>
+      <p class="subtitle" data-translate="login_subtitle" style="font-weight: 500;">Your trusted election companion</p>
 
       <div style="margin-bottom:1.5rem;">
         <select class="lang-select" id="loginLangSelect" onchange="changeLanguage(this.value)" style="width:100%;">
@@ -51,6 +52,10 @@
         <code onclick="fillVoterId('GHI3456789')">GHI3456789</code>
         <code onclick="fillVoterId('JKL4567890')">JKL4567890</code>
         <code onclick="fillVoterId('MNO5678901')">MNO5678901</code>
+      </div>
+      
+      <div style="margin-top: 2rem; font-size: 0.75rem; color: var(--text-muted);">
+        Designed & Developed by Vote Saarthi Team
       </div>
     </div>
   </div>

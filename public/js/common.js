@@ -23,8 +23,11 @@ function renderNavbar(activePage) {
   nav.className = 'navbar';
   nav.innerHTML = `
     <div class="navbar-brand">
-      <div class="flag"><span class="sf"></span><span class="wh"></span><span class="gr"></span></div>
-      Vote Saarthi
+      <div style="font-size: 1.6rem; margin-right: 0.5rem;">🏛️</div>
+      <div style="display: flex; flex-direction: column; line-height: 1.1;">
+        <span>Vote Saarthi</span>
+        <span style="font-size: 0.6rem; font-weight: 500; letter-spacing: 1px; color: rgba(255,255,255,0.8); text-transform: uppercase;">Election Commission</span>
+      </div>
     </div>
     <div class="nav-links">
       <a href="/dashboard" class="${activePage === 'dashboard' ? 'active' : ''}" data-translate="nav_dashboard">Dashboard</a>

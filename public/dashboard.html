@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Vote Saarthi Dashboard - Access election guides, find your polling booth, and cast your vote securely.">
   <title>Dashboard — Vote Saarthi</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=2">
 </head>
 <body>
   <div class="bg-animation"></div>
@@ -30,11 +30,11 @@
     </div>
 
     <div class="action-grid">
-      <div class="glass-card action-card" onclick="window.location.href='/guide'" id="card-guide">
+      <div class="glass-card action-card" onclick="window.location.href='/guide'" id="card-guide" style="border: 2px solid var(--nic-blue); background: rgba(0,51,102,0.03);">
         <div class="card-glow"></div>
-        <div class="icon">📋</div>
-        <h3 data-translate="card_guide_title">Election Process Guide</h3>
-        <p data-translate="card_guide_desc">Step-by-step walkthrough of the voting process, your rights, and what to expect</p>
+        <div class="icon">📖</div>
+        <h3 data-translate="card_guide_title" style="color: var(--nic-blue);">Interactive Election Guide</h3>
+        <p data-translate="card_guide_desc" style="color: var(--text-primary); font-weight: 500;">Step-by-step interactive walkthrough of the voting process, timelines, and your rights</p>
       </div>
       <div class="glass-card action-card" onclick="window.location.href='/booth-finder'" id="card-booth">
         <div class="card-glow"></div>
@@ -90,6 +90,11 @@
         </div>
         <button class="btn btn-outline" onclick="document.getElementById('timelineModal').classList.remove('active')" style="width:100%;justify-content:center;" data-translate="close_btn">Close</button>
       </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 3rem; font-size: 0.8rem; color: var(--text-muted);">
+      <div class="tricolor-line" style="width: 50px; margin-bottom: 0.5rem;"></div>
+      Designed & Developed by Vote Saarthi Team | Government of India Initiative (Mock)
     </div>
   </main>
 
